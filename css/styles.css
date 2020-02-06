@@ -1,0 +1,33 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section h2{
+  display: grid;
+  border-style: solid;
+  background-image: url(https://media2.giphy.com/media/YUjv4LRMQrirCIyWEv/giphy.gif?cid=790b7611172d270e4681e12fa9a343f5a6187b13ad08ca4a&rid=giphy.gif);
+  background-repeat: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  clip-path: polygon(100% 48%, 91% 39%, 82% 33%, 72% 28%, 59% 24%, 50% 23%, 40% 24%, 28% 27%, 16% 31%, 8% 34%, 2% 39%, 6% 45%, 9% 50%, 11% 57%, 12% 64%, 12% 71%, 12% 77%, 9% 86%, 0 100%, 20% 85%, 31% 76%, 38% 70%, 49% 64%, 61% 59%, 71% 55%, 83% 50%);
+  color: white
+}
+
+input[type='checkbox']{
+  display: none;
+}
+
+input[type='checkbox'] ~ article, blockquote{
+  display: none;
+}
+
+input[type='checkbox']:checked ~ article{
+  display: block;
+}
