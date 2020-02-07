@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 697 845" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle Copy 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M668.247711,213.308328 C484.397736,173.060871 392.472749,185.47772 392.472749,250.558875 C392.472749,315.64003 472.637447,496.390208 632.966844,792.809409 L20,792.809409 C25.1538026,345.839745 44.1434117,91.1071173 76.9688275,28.6115267 C109.794243,-33.8840638 306.887205,27.6815367 668.247711,213.308328 Z" id="path-1"></path>
+        <filter x="-8.6%" y="-4.0%" width="117.1%" height="114.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="24" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.682352941   0 0 0 0 0.243137255   0 0 0 0 0.576470588  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-12.5%" y="-7.2%" width="125.0%" height="120.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="48" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="18" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="20" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.874509804   0 0 0 0 0.152941176   0 0 0 0 0.0352941176  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-Copy-8" transform="translate(344.123856, 398.904704) scale(-1, 1) translate(-344.123856, -398.904704) ">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FDDA08" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
