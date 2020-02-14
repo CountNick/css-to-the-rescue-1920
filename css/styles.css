@@ -1,3 +1,21 @@
+/***---------------------------***/
+/***----Global styling SECTION-----***/
+/***---------------------------***/
+*{
+  cursor:url(../img/swirl2.png), auto;
+
+}
+
+@font-face {
+  font-family: Musicals;
+  src: url('../fonts/musicals.ttf');
+}
+
+@font-face {
+  font-family: Rash;
+  src: url('../fonts/ARashNaziBlurb.ttf');
+}
+
 
 html,
 body {
@@ -5,14 +23,22 @@ body {
   margin: 0;
   box-sizing: border-box;
   /* overflow: hidden; */
+  background-color: black;
 }
 
+/***---------------------------***/
+/***--end global styling SECTION--***/
+/***---------------------------***/
+
 main{
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -webkit-animation:spin 20s linear infinite;
+  /* -webkit-animation:spin 20s linear infinite;
   -moz-animation:spin 20s linear infinite;
-  animation:spin 20s linear infinite;
+  animation:spin 20s linear infinite; */
+  
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
@@ -22,14 +48,79 @@ main:hover{
   animation-play-state: paused;
 }
 
-section h2{
+section{
   display: grid;
-  border-style: solid;
-  background-image: url(https://media2.giphy.com/media/YUjv4LRMQrirCIyWEv/giphy.gif?cid=790b7611172d270e4681e12fa9a343f5a6187b13ad08ca4a&rid=giphy.gif);
+  border-style: dotted;
+  /* background-image: url(https://media2.giphy.com/media/YUjv4LRMQrirCIyWEv/giphy.gif?cid=790b7611172d270e4681e12fa9a343f5a6187b13ad08ca4a&rid=giphy.gif); */
   background-repeat: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  clip-path: polygon(100% 48%, 91% 39%, 82% 33%, 72% 28%, 59% 24%, 50% 23%, 40% 24%, 28% 27%, 16% 31%, 8% 34%, 2% 39%, 6% 45%, 9% 50%, 11% 57%, 12% 64%, 12% 71%, 12% 77%, 9% 86%, 0 100%, 20% 85%, 31% 76%, 38% 70%, 49% 64%, 61% 59%, 71% 55%, 83% 50%);
+  padding-top: 25%;
+  padding-bottom: 25%;
+
+  /* clip-path: polygon(100% 48%, 91% 39%, 82% 33%, 72% 28%, 59% 24%, 50% 23%, 40% 24%, 28% 27%, 16% 31%, 8% 34%, 2% 39%, 6% 45%, 9% 50%, 11% 57%, 12% 64%, 12% 71%, 12% 77%, 9% 86%, 0 100%, 20% 85%, 31% 76%, 38% 70%, 49% 64%, 61% 59%, 71% 55%, 83% 50%); */
+  color: white;
+  background-color: red;
+  /* animation:spin 5s linear infinite; */
+  /* border-radius: 50%; */
+  
+  animation:borderRad 1s linear infinite;
+
+}
+
+section >label > header h2{
+  mix-blend-mode: exclusion;
+  font-family: Musicals;
+  font-size: 2rem;
+}
+
+section article {
+  font-family: Rash;
+}
+
+article{
+  mix-blend-mode: exclusion;
+}
+
+section:nth-child(1){
+  background-color: blue;
+}
+section:nth-child(2){
+  background-color: blue;
+}
+
+section{
+  mix-blend-mode: difference;
+}
+article{
+  mix-blend-mode: exclusion;
+}
+
+article:hover{
+  mix-blend-mode: hard-light;
+}
+
+section{
+  text-align: center;
+}
+
+section h2{
+  mix-blend-mode: luminosity;
+}
+
+
+@keyframes borderRad{
+  0%, 100%{
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45% ;
+  }
+  25%{
+    border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
+  }
+  50%{
+    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
+  }
+
+}
+
+section{
   color: white;
 }
 
@@ -37,7 +128,7 @@ input[type='checkbox']{
   display: none;
 }
 
-input[type='checkbox'] ~ article, blockquote{
+input[type='checkbox'] ~ article, blockquote, p{
   display: none;
 }
 
@@ -70,9 +161,10 @@ svg {
   fill: #000000;
 }
 
-div{
-  text-align: center;
-}
+
+/***---------------------------***/
+/***----Main title SECTION-----***/
+/***---------------------------***/
 
 h1 {
   text-align: center;
@@ -99,8 +191,209 @@ h1:nth-child(3) {
   color: #f16f6f;
   animation: glitch3 2.5s infinite;
 }
-/*Keyframes*/
 
+/***---------------------------***/
+/***--End main title SECTION---***/
+/***---------------------------***/
+
+
+/***---------------------------***/
+/***-------Eyes SECTION--------***/
+/***---------------------------***/
+body > div > div > div{
+
+    
+  
+}
+
+body > div > div > div:nth-child(even){
+  width: 55%;
+  height: 200px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 75% 0;
+  overflow: hidden;
+  
+}
+body > div > div > div:nth-child(odd){
+  width: 55%;
+  height: 200px;
+  background: purple;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 75% 0;
+  overflow: hidden;
+  
+}
+
+body div > div > div > div:nth-child(2){
+  width: 40px;
+  height: 40px;
+  background: #222f3e;
+  border-radius: 50%;
+  border: 30px solid #576557;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body div > div > div:nth-child(odd) > div:nth-child(2){
+  width: 40px;
+  height: 40px;
+  background: green;
+  border-radius: 50%;
+  border: 30px solid yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+body div > div > div > div:nth-child(1){
+  width: 300px;
+  height: 160px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+
+}
+
+body div > div > div > div:nth-child(1) span{
+  display: block;
+  width: 100%;
+  height: 20%;
+  background: black;
+  border-radius: 0 0 60% 60%;
+  transition: 0.4s all;
+  
+
+  animation: blinking 2s infinite ;
+
+}
+body div > div > div:nth-child(even) > div:nth-child(1) span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 0 0 60% 60%;
+  transition: 0.4s all;
+
+  animation: blinking2 2s infinite ;
+
+}
+
+
+
+/* body > div > div > div:hover > div:nth-child(1) span{
+  height: 100%;
+} */
+/*
+end eye /////////////////////
+*/
+
+body > div{
+  z-index: -1;
+}
+
+body > div > div{
+  display: grid;
+  grid-gap: .1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: -37rem;
+}
+
+body > header{
+  z-index: 5;
+  position: relative;
+}
+
+/***---------------------------***/
+/***----End ofeyes SECTION-----***/
+/***---------------------------***/
+
+
+
+/* body{
+  
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 2s ease infinite;
+  
+} */
+
+
+/***---------------------------***/
+/***ANAMATION KEYFRAMES SECTION***/
+/***---------------------------***/
+
+/*** Start rainbow animation ***/
+
+@-webkit-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
+/*** End rainbow ***/
+
+/*** Start blinking animations ***/
+@keyframes blinking{
+  0%{
+    height: 20%;
+  }
+  50%{
+    height: 100%;
+  }
+  100%{
+    height: 20%;
+  }
+}
+@keyframes blinking2{
+  0%{
+    height: 100%;
+  }
+  50%{
+    height: 25%;
+  }
+  100%{
+    height: 100%;
+  }
+}
+/*** End blinking animation ***/
+
+/*** Start glitch animations ***/
 @keyframes glitch1 {
   0% {
     transform: none;
@@ -265,33 +558,61 @@ h1:nth-child(3) {
     opacity: 0.25;
   }
 }
-/* .eye{
-  width: 200px;
-  height: 200px;
-  background: #ffffff;
-  position: absolute;
+/*** End glitch animations ***/
+
+@media (prefers-reduced-motion: reduce) {
+
+  body div > div > div > div:nth-child(1) span{
+    animation: blinking 10s infinite ;
+  }
+
+  body div > div > div:nth-child(even) > div:nth-child(1) span{
+    animation: blinking2 10s infinite ;
+  }
+
+}
+
+section div{
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  color: hsla(295, 100%, 50%, 1);
+   border-radius: 20%;
+   position: absolute;
+   animation: borderRad 2s infinite;
+ 
+ }
+
+ section div >div:nth-of-type(1){
+  
+  width: 90%;
+  height: 90%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50% ) rotate(-45deg);
-  border-radius: 75% 0;
-}
+  transform: translate(0%, 0%);
+  background-color: hsla(103, 100%, 50%, 1);
 
-.ball{
-  width: 40px;
-  height: 40px;
-  background: #222f3e;
-  border-radius: 50%;
-  border: 30px solid #576574;
-  position: absolute;
-  transform: translate(50%, 50%);
+  border-style: dotted;
+  border-width: 40px;
+  transform: translate(-50%, -50%);
+ mix-blend-mode: difference;
 
 
 }
+ 
+section:nth-of-type(3) div >div:nth-of-type(1){
 
-.shut{
-  width: 300px;
-  height: 150px;
-  background: black;
-  position: absolute;
-  transform: translate(50%, 50%) rotate(45deg);
-} */
+  border-style: dashed;
+
+}
+
+section:nth-of-type(2) div >div:nth-of-type(1){
+
+  border-style: ridge;
+
+}
+section:nth-of-type(4) div >div:nth-of-type(1){
+
+  border-style: double;
+
+}

@@ -1,3 +1,27 @@
+# Tryouts 
+
+* Checkbox hack
+* Custom cursor
+* Keyframes
+* Mix-blend-mode
+
+# Codepen experiments
+
+* [swirl](https://codepen.io/nick-meijer/pen/ExjPyGo)
+    * using border-style: ridge
+    * mix-blend-mode: difference;
+
+* [dottedBorder](https://codepen.io/nick-meijer/pen/wvaMjqW)
+    * using border-style: dotted
+    * mix-blend-mode: difference;
+
+* [dashedBorder](https://codepen.io/nick-meijer/pen/oNXbdpR)
+    * using border-style: dashed
+    * mix-blend-mode: difference;
+
+
+
+
 # CSS to the Rescue @cmda-minor-web 19-20
 
 _This course is in English_
