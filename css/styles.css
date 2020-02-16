@@ -36,8 +36,8 @@ main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* -webkit-animation:spin 20s linear infinite;
-  -moz-animation:spin 20s linear infinite;
-  animation:spin 20s linear infinite; */
+  -moz-animation:spin 20s linear infinite;*/
+  animation:spin 20s linear infinite;
   
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
@@ -62,7 +62,7 @@ section{
   /* animation:spin 5s linear infinite; */
   /* border-radius: 50%; */
   
-  animation:borderRad 1s linear infinite;
+  /* animation:borderRad 1s linear infinite; */
 
 }
 
@@ -77,7 +77,7 @@ section article {
 }
 
 article{
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
 }
 
 section:nth-child(1){
@@ -103,7 +103,7 @@ section{
 }
 
 section h2{
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
 }
 
 
@@ -256,7 +256,7 @@ body div > div > div:nth-child(odd) > div:nth-child(2){
 body div > div > div > div:nth-child(1){
   width: 300px;
   height: 160px;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  /* transform: translate(-50%, -50%) rotate(-45deg); */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -264,7 +264,7 @@ body div > div > div > div:nth-child(1){
 
 }
 
-body div > div > div > div:nth-child(1) span{
+/* body div > div > div > div:nth-child(1) span{
   display: block;
   width: 100%;
   height: 20%;
@@ -286,7 +286,7 @@ body div > div > div:nth-child(even) > div:nth-child(1) span{
 
   animation: blinking2 2s infinite ;
 
-}
+} */
 
 
 
@@ -319,7 +319,7 @@ body > header{
 
 
 
-/* body{
+body{
   
   height: 100%;
   width: 100%;
@@ -336,7 +336,7 @@ background-size: 1800% 1800%;
 -o-animation: rainbow 18s ease infinite;
   animation: rainbow 2s ease infinite;
   
-} */
+}
 
 
 /***---------------------------***/
@@ -580,6 +580,7 @@ section div{
    border-radius: 20%;
    position: absolute;
    animation: borderRad 2s infinite;
+   animation: filterColor 2s infinite;
  
  }
 
@@ -595,9 +596,15 @@ section div{
   border-style: dotted;
   border-width: 40px;
   transform: translate(-50%, -50%);
- mix-blend-mode: difference;
+
+ /* mix-blend-mode: difference; */
 
 
+}
+
+
+section div > div:nth-child(1){
+  mix-blend-mode: difference;
 }
  
 section:nth-of-type(3) div >div:nth-of-type(1){
@@ -615,4 +622,28 @@ section:nth-of-type(4) div >div:nth-of-type(1){
 
   border-style: double;
 
+}
+
+@keyframes filterColor{
+
+  0%{
+    filter: hue-rotate(0deg);
+    
+  }
+  
+   25%{
+    filter: hue-rotate(90deg);
+  }
+  
+   50%{
+    filter: hue-rotate(180deg);
+  }
+  
+   75%{
+    filter: hue-rotate(270deg);
+  }
+  
+    100%{
+    filter: hue-rotate(360deg);
+  }
 }
