@@ -24,6 +24,7 @@ body {
   box-sizing: border-box;
   /* overflow: hidden; */
   background-color: black;
+  overflow-x: hidden;
 }
 
 /***---------------------------***/
@@ -34,7 +35,8 @@ main{
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10%;
   /* -webkit-animation:spin 20s linear infinite;
   -moz-animation:spin 20s linear infinite;*/
   /* animation:spin 20s linear infinite; */
@@ -67,7 +69,7 @@ section{
 }
 
 section >label > header h2{
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
   font-family: Musicals;
   font-size: 2rem;
 }
@@ -118,7 +120,7 @@ section h2{
 }
 
 section{
-  /* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   color: white;
 }
 
@@ -135,6 +137,7 @@ input[type='checkbox']:checked ~ article{
   mix-blend-mode: darken;
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
+
 
 section:focus-within{
   transform: rotate(0deg);
@@ -154,6 +157,7 @@ section:nth-of-type(4):focus-within{
 
 section{
   transform: rotate(-45deg); 
+  transition: transform .8s ease-in-out;
 }
 
 section:nth-child(2){
@@ -313,6 +317,7 @@ body > div > div{
 }
 
 body > header{
+  padding-top: 5%;
   z-index: 5;
   position: relative;
 }
@@ -337,8 +342,8 @@ background-size: 1800% 1800%;
 
 /* -webkit-animation: rainbow 18s ease infinite;
 -z-animation: rainbow 18s ease infinite;
--o-animation: rainbow 18s ease infinite; */
-  /* animation: rainbow 2s ease infinite; */
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 2s ease infinite; */
   
 }
 
@@ -583,7 +588,7 @@ section div{
   color: hsla(295, 100%, 50%, 1);
    border-radius: 20%;
    position: absolute;
-   animation: borderRad 2s infinite;
+   /* animation: borderRad 2s infinite; */
    animation: filterColor 2s infinite;
  
  }
@@ -603,9 +608,6 @@ section div{
 
  /* mix-blend-mode: difference; */
 
- 
-
-
 }
 
 
@@ -621,7 +623,7 @@ section:nth-of-type(3) div >div:nth-of-type(1){
 
 section:nth-of-type(2) div >div:nth-of-type(1){
 
-  border-style: ridge;
+  border-style: solid;
 
 }
 section:nth-of-type(4) div >div:nth-of-type(1){
@@ -658,3 +660,112 @@ body:focus-within{
   animation-play-state: paused;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  section div{
+    color: hsla(292, 100%, 17%, 1);
+   }
+
+   section div >div:nth-of-type(1){
+    
+    background-color: hsla(103, 100%, 18%, 1);
+  
+  }
+  
+  body{
+
+    height: 100%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+
+    background: linear-gradient(124deg, #616161, #3f3f3f, #111111, #313122, #172c1b, #0f2b2c, #0b0925, #200622, #250029);
+    background-size: 1800% 1800%;
+    
+  }
+
+  input[type='checkbox']:checked ~ article{
+    mix-blend-mode: luminosity;
+  }
+
+}
+
+@keyframes polygons {
+  
+  25% {
+    clip-path: polygon(20% 0%, 100% 38%, 70% 90%, 0% 100%);
+    background: pink;
+  }
+  50% {
+    clip-path: polygon(0 46%, 100% 15%, 55% 74%, 0 100%);
+    background: orange;
+  }
+  75% {
+    clip-path: polygon(100% 38%, 100% 38%, 66% 100%, 0 53%);
+    background: cornflowerblue;
+  }
+}
+
+@media print {
+
+  @page{
+    size: A4 landscape;
+  }
+
+  body{
+    animation-play-state: paused;
+    -webkit-print-color-adjust: exact;
+    height: 100%;
+  }
+
+  main{
+    grid-gap: 1%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  section{
+    transform: rotate(0deg); 
+    width: 100%;
+    height: 55%;
+  }
+
+  section:nth-child(2){
+    transform: rotate(0deg);
+  }
+  
+  section:nth-child(3){
+    transform: rotate(0deg);
+  }
+  
+  section:nth-child(4){
+    transform: rotate(0deg);
+  }
+
+  /* input[type='checkbox'] ~ article{
+    display: block;
+    height: 90%;
+
+  } */
+
+  section >label > header h2{
+    mix-blend-mode: color-dodge;
+  }
+
+  
+  input[type='checkbox'] ~ article{
+    all: unset;
+    font-size: 1.5rem;
+    height: 100%;
+
+  }
+
+  
+
+
+
+  
+
+}
