@@ -37,7 +37,7 @@ main{
   grid-template-columns: 1fr 1fr;
   /* -webkit-animation:spin 20s linear infinite;
   -moz-animation:spin 20s linear infinite;*/
-  animation:spin 20s linear infinite;
+  /* animation:spin 20s linear infinite; */
   
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
@@ -50,7 +50,7 @@ main:hover{
 
 section{
   display: grid;
-  border-style: dotted;
+  /* border-style: dotted; */
   /* background-image: url(https://media2.giphy.com/media/YUjv4LRMQrirCIyWEv/giphy.gif?cid=790b7611172d270e4681e12fa9a343f5a6187b13ad08ca4a&rid=giphy.gif); */
   background-repeat: center;
   padding-top: 25%;
@@ -58,7 +58,7 @@ section{
 
   /* clip-path: polygon(100% 48%, 91% 39%, 82% 33%, 72% 28%, 59% 24%, 50% 23%, 40% 24%, 28% 27%, 16% 31%, 8% 34%, 2% 39%, 6% 45%, 9% 50%, 11% 57%, 12% 64%, 12% 71%, 12% 77%, 9% 86%, 0 100%, 20% 85%, 31% 76%, 38% 70%, 49% 64%, 61% 59%, 71% 55%, 83% 50%); */
   color: white;
-  background-color: red;
+  /* background-color: red; */
   /* animation:spin 5s linear infinite; */
   /* border-radius: 50%; */
   
@@ -74,18 +74,15 @@ section >label > header h2{
 
 section article {
   font-family: Rash;
+  font-size: 1.5rem;
+  background-color: black;
+  
 }
 
 article{
   /* mix-blend-mode: exclusion; */
 }
 
-section:nth-child(1){
-  background-color: blue;
-}
-section:nth-child(2){
-  background-color: blue;
-}
 
 section{
   mix-blend-mode: difference;
@@ -95,7 +92,7 @@ article{
 }
 
 article:hover{
-  mix-blend-mode: hard-light;
+  /* mix-blend-mode: hard-light; */
 }
 
 section{
@@ -121,6 +118,7 @@ section h2{
 }
 
 section{
+  /* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
   color: white;
 }
 
@@ -134,11 +132,28 @@ input[type='checkbox'] ~ article, blockquote, p{
 
 input[type='checkbox']:checked ~ article{
   display: block;
+  mix-blend-mode: darken;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+section:focus-within{
+  transform: rotate(0deg);
+}
+
+section:nth-of-type(2):focus-within{
+  transform: rotate(0deg);
+}
+
+section:nth-of-type(3):focus-within{
+  transform: rotate(0deg);
+}
+
+section:nth-of-type(4):focus-within{
+  transform: rotate(0deg);
 }
 
 section{
-  transform: rotate(-45deg);
-  
+  transform: rotate(-45deg); 
 }
 
 section:nth-child(2){
@@ -253,17 +268,6 @@ body div > div > div:nth-child(odd) > div:nth-child(2){
   
 }
 
-body div > div > div > div:nth-child(1){
-  width: 300px;
-  height: 160px;
-  /* transform: translate(-50%, -50%) rotate(-45deg); */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 999;
-
-}
-
 /* body div > div > div > div:nth-child(1) span{
   display: block;
   width: 100%;
@@ -331,10 +335,10 @@ body{
 background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
 background-size: 1800% 1800%;
 
--webkit-animation: rainbow 18s ease infinite;
+/* -webkit-animation: rainbow 18s ease infinite;
 -z-animation: rainbow 18s ease infinite;
--o-animation: rainbow 18s ease infinite;
-  animation: rainbow 2s ease infinite;
+-o-animation: rainbow 18s ease infinite; */
+  /* animation: rainbow 2s ease infinite; */
   
 }
 
@@ -562,13 +566,13 @@ background-size: 1800% 1800%;
 
 @media (prefers-reduced-motion: reduce) {
 
-  body div > div > div > div:nth-child(1) span{
-    animation: blinking 10s infinite ;
-  }
+main{
+  animation-play-state: paused;
+}
 
-  body div > div > div:nth-child(even) > div:nth-child(1) span{
-    animation: blinking2 10s infinite ;
-  }
+body{
+  animation-play-state: paused;
+}
 
 }
 
@@ -599,6 +603,8 @@ section div{
 
  /* mix-blend-mode: difference; */
 
+ 
+
 
 }
 
@@ -627,7 +633,7 @@ section:nth-of-type(4) div >div:nth-of-type(1){
 @keyframes filterColor{
 
   0%{
-    filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg) ;
     
   }
   
@@ -647,3 +653,8 @@ section:nth-of-type(4) div >div:nth-of-type(1){
     filter: hue-rotate(360deg);
   }
 }
+
+body:focus-within{
+  animation-play-state: paused;
+}
+
