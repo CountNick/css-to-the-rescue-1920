@@ -28,6 +28,9 @@
 * Making a responsive grid without mediaqueries
 * Making cool psychadelic animations with just css
 * Before and after in css
+* Using checkboxes to open 
+* Making a custom cursor
+* More about keyframes animations
 
 # My process
 

@@ -1,25 +1,23 @@
 /***---------------------------***/
 /***----Global styling SECTION-----***/
 /***---------------------------***/
-*{
-  cursor:url(../img/swirl2.png), auto;
-
+* {
+  cursor: url(../img/swirl2.png), auto;
 }
 
 @font-face {
   font-family: Musicals;
-  src: url('../fonts/musicals.ttf');
+  src: url("../fonts/musicals.ttf");
 }
 
 @font-face {
   font-family: Rash;
-  src: url('../fonts/ARashNaziBlurb.ttf');
+  src: url("../fonts/ARashNaziBlurb.ttf");
 }
-
 
 html,
 body {
-	padding: 0;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
   /* overflow: hidden; */
@@ -31,7 +29,7 @@ body {
 /***--end global styling SECTION--***/
 /***---------------------------***/
 
-main{
+main {
   position: relative;
   z-index: 1;
   display: grid;
@@ -40,17 +38,29 @@ main{
   /* -webkit-animation:spin 20s linear infinite;
   -moz-animation:spin 20s linear infinite;*/
   /* animation:spin 20s linear infinite; */
-  
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
-main:hover{
+main:hover {
   animation-play-state: paused;
 }
 
-section{
+section {
   display: grid;
   /* border-style: dotted; */
   /* background-image: url(https://media2.giphy.com/media/YUjv4LRMQrirCIyWEv/giphy.gif?cid=790b7611172d270e4681e12fa9a343f5a6187b13ad08ca4a&rid=giphy.gif); */
@@ -63,12 +73,11 @@ section{
   /* background-color: red; */
   /* animation:spin 5s linear infinite; */
   /* border-radius: 50%; */
-  
-  /* animation:borderRad 1s linear infinite; */
 
+  /* animation:borderRad 1s linear infinite; */
 }
 
-section >label > header h2{
+section > label > header h2 {
   /* mix-blend-mode: exclusion; */
   font-family: Musicals;
   font-size: 2rem;
@@ -78,108 +87,111 @@ section article {
   font-family: Rash;
   font-size: 1.5rem;
   background-color: black;
-  
 }
 
-article{
-  /* mix-blend-mode: exclusion; */
-}
-
-
-section{
+section {
   mix-blend-mode: difference;
 }
-article{
+article {
   mix-blend-mode: exclusion;
 }
 
-article:hover{
-  /* mix-blend-mode: hard-light; */
-}
-
-section{
+section {
   text-align: center;
 }
 
-section h2{
-  /* mix-blend-mode: luminosity; */
-}
-
-
-@keyframes borderRad{
-  0%, 100%{
-    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45% ;
+@keyframes borderRad {
+  0%,
+  100% {
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
   }
-  25%{
+  25% {
     border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
   }
-  50%{
+  50% {
     border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
   }
-
 }
 
-section{
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+section {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
   color: white;
 }
 
-input[type='checkbox']{
+/***---------------------------***/
+/***----Checkbox hack SECTION-----***/
+/***---------------------------***/
+
+input[type="checkbox"] {
   display: none;
 }
 
-input[type='checkbox'] ~ article, blockquote, p{
+input[type="checkbox"] ~ article,
+blockquote,
+p {
   display: none;
 }
 
-input[type='checkbox']:checked ~ article{
+input[type="checkbox"]:checked ~ article {
   display: block;
   mix-blend-mode: darken;
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
 }
 
+/***---------------------------***/
+/***----End ofheckbox hack SECTION-----***/
+/***---------------------------***/
 
-section:focus-within{
+section:focus-within {
   transform: rotate(0deg);
 }
 
-section:nth-of-type(2):focus-within{
+section:nth-of-type(2):focus-within {
   transform: rotate(0deg);
 }
 
-section:nth-of-type(3):focus-within{
+section:nth-of-type(3):focus-within {
   transform: rotate(0deg);
 }
 
-section:nth-of-type(4):focus-within{
+section:nth-of-type(4):focus-within {
   transform: rotate(0deg);
 }
 
-section{
-  transform: rotate(-45deg); 
-  transition: transform .8s ease-in-out;
+section {
+  transform: rotate(-45deg);
+  transition: transform 0.8s ease-in-out;
 }
 
-section:nth-child(2){
+section:nth-child(2) {
   transform: rotate(45deg);
 }
 
-section:nth-child(3){
+section:nth-child(3) {
   transform: rotate(-135deg);
 }
 
-section:nth-child(4){
+section:nth-child(4) {
   transform: rotate(135deg);
 }
-
-svg {
-  /* z-index: auto; */
-  margin-top: -13rem;
-  width: 50%;
-  stroke: #000000;
-  fill: #000000;
-}
-
 
 /***---------------------------***/
 /***----Main title SECTION-----***/
@@ -190,14 +202,14 @@ h1 {
   color: #fff;
   font-size: 5em;
   letter-spacing: 8px;
-  font-family: 'Press Start 2P';
+  font-family: Musicals;
   font-weight: 400;
   /*Create overlap*/
-  
+
   margin: 0;
   line-height: 0;
   /*Animation*/
-  
+
   animation: glitch1 2.5s infinite;
 }
 
@@ -215,108 +227,7 @@ h1:nth-child(3) {
 /***--End main title SECTION---***/
 /***---------------------------***/
 
-
-/***---------------------------***/
-/***-------Eyes SECTION--------***/
-/***---------------------------***/
-body > div > div > div{
-
-    
-  
-}
-
-body > div > div > div:nth-child(even){
-  width: 55%;
-  height: 200px;
-  background: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border-radius: 75% 0;
-  overflow: hidden;
-  
-}
-body > div > div > div:nth-child(odd){
-  width: 55%;
-  height: 200px;
-  background: purple;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border-radius: 75% 0;
-  overflow: hidden;
-  
-}
-
-body div > div > div > div:nth-child(2){
-  width: 40px;
-  height: 40px;
-  background: #222f3e;
-  border-radius: 50%;
-  border: 30px solid #576557;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-body div > div > div:nth-child(odd) > div:nth-child(2){
-  width: 40px;
-  height: 40px;
-  background: green;
-  border-radius: 50%;
-  border: 30px solid yellow;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-
-/* body div > div > div > div:nth-child(1) span{
-  display: block;
-  width: 100%;
-  height: 20%;
-  background: black;
-  border-radius: 0 0 60% 60%;
-  transition: 0.4s all;
-  
-
-  animation: blinking 2s infinite ;
-
-}
-body div > div > div:nth-child(even) > div:nth-child(1) span{
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: black;
-  border-radius: 0 0 60% 60%;
-  transition: 0.4s all;
-
-  animation: blinking2 2s infinite ;
-
-} */
-
-
-
-/* body > div > div > div:hover > div:nth-child(1) span{
-  height: 100%;
-} */
-/*
-end eye /////////////////////
-*/
-
-body > div{
-  z-index: -1;
-}
-
-body > div > div{
-  display: grid;
-  grid-gap: .1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: -37rem;
-}
-
-body > header{
+body > header {
   padding-top: 5%;
   z-index: 5;
   position: relative;
@@ -326,77 +237,109 @@ body > header{
 /***----End ofeyes SECTION-----***/
 /***---------------------------***/
 
-
-
-body{
-  
+body {
   height: 100%;
   width: 100%;
-  left:0;
+  left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   position: absolute;
-background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-background-size: 1800% 1800%;
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  background-size: 1800% 1800%;
 
-/* -webkit-animation: rainbow 18s ease infinite;
+  /* -webkit-animation: rainbow 18s ease infinite;
 -z-animation: rainbow 18s ease infinite;
 -o-animation: rainbow 18s ease infinite;
   animation: rainbow 2s ease infinite; */
-  
 }
 
+/***---------------------------***/
+/***ANIMATION KEYFRAMES SECTION***/
+/***---------------------------***/
 
 /***---------------------------***/
-/***ANAMATION KEYFRAMES SECTION***/
-/***---------------------------***/
-
 /*** Start rainbow animation ***/
+/***---------------------------***/
 
 @-webkit-keyframes rainbow {
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 @-moz-keyframes rainbow {
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 @-o-keyframes rainbow {
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
-@keyframes rainbow { 
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 
 /*** End rainbow ***/
 
 /*** Start blinking animations ***/
-@keyframes blinking{
-  0%{
+@keyframes blinking {
+  0% {
     height: 20%;
   }
-  50%{
+  50% {
     height: 100%;
   }
-  100%{
+  100% {
     height: 20%;
   }
 }
-@keyframes blinking2{
-  0%{
+@keyframes blinking2 {
+  0% {
     height: 100%;
   }
-  50%{
+  50% {
     height: 25%;
   }
-  100%{
+  100% {
     height: 100%;
   }
 }
@@ -569,32 +512,40 @@ background-size: 1800% 1800%;
 }
 /*** End glitch animations ***/
 
-@media (prefers-reduced-motion: reduce) {
+@keyframes filterColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
 
-main{
-  animation-play-state: paused;
+  25% {
+    filter: hue-rotate(90deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+  }
+
+  75% {
+    filter: hue-rotate(270deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
-body{
-  animation-play-state: paused;
-}
-
-}
-
-section div{
+section div {
   z-index: -1;
   width: 100%;
   height: 100%;
   color: hsla(295, 100%, 50%, 1);
-   border-radius: 20%;
-   position: absolute;
-   /* animation: borderRad 2s infinite; */
-   animation: filterColor 2s infinite;
- 
- }
+  border-radius: 20%;
+  position: absolute;
+  /* animation: borderRad 2s infinite; */
+  animation: filterColor 2s infinite;
+}
 
- section div >div:nth-of-type(1){
-  
+section div > div:nth-of-type(1) {
   width: 90%;
   height: 90%;
   top: 50%;
@@ -606,166 +557,122 @@ section div{
   border-width: 40px;
   transform: translate(-50%, -50%);
 
- /* mix-blend-mode: difference; */
-
+  /* mix-blend-mode: difference; */
 }
 
-
-section div > div:nth-child(1){
+section div > div:nth-child(1) {
   mix-blend-mode: difference;
 }
- 
-section:nth-of-type(3) div >div:nth-of-type(1){
 
+section:nth-of-type(3) div > div:nth-of-type(1) {
   border-style: dashed;
-
 }
 
-section:nth-of-type(2) div >div:nth-of-type(1){
-
+section:nth-of-type(2) div > div:nth-of-type(1) {
   border-style: solid;
-
 }
-section:nth-of-type(4) div >div:nth-of-type(1){
-
+section:nth-of-type(4) div > div:nth-of-type(1) {
   border-style: double;
-
 }
 
-@keyframes filterColor{
 
-  0%{
-    filter: hue-rotate(0deg) ;
-    
-  }
-  
-   25%{
-    filter: hue-rotate(90deg);
-  }
-  
-   50%{
-    filter: hue-rotate(180deg);
-  }
-  
-   75%{
-    filter: hue-rotate(270deg);
-  }
-  
-    100%{
-    filter: hue-rotate(360deg);
-  }
-}
-
-body:focus-within{
-  animation-play-state: paused;
-}
+/***---------------------------***/
+/*** Dark mode ***/
+/***---------------------------***/
 
 @media (prefers-color-scheme: dark) {
-
-  section div{
+  section div {
     color: hsla(292, 100%, 17%, 1);
-   }
-
-   section div >div:nth-of-type(1){
-    
-    background-color: hsla(103, 100%, 18%, 1);
-  
   }
-  
-  body{
 
+  section div > div:nth-of-type(1) {
+    background-color: hsla(103, 100%, 18%, 1);
+  }
+
+  body {
     height: 100%;
     width: 100%;
-    left:0;
+    left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     position: absolute;
 
-    background: linear-gradient(124deg, #616161, #3f3f3f, #111111, #313122, #172c1b, #0f2b2c, #0b0925, #200622, #250029);
+    background: linear-gradient(
+      124deg,
+      #616161,
+      #3f3f3f,
+      #111111,
+      #313122,
+      #172c1b,
+      #0f2b2c,
+      #0b0925,
+      #200622,
+      #250029
+    );
     background-size: 1800% 1800%;
-    
   }
 
-  input[type='checkbox']:checked ~ article{
+  input[type="checkbox"]:checked ~ article {
     mix-blend-mode: luminosity;
   }
-
 }
 
-@keyframes polygons {
-  
-  25% {
-    clip-path: polygon(20% 0%, 100% 38%, 70% 90%, 0% 100%);
-    background: pink;
-  }
-  50% {
-    clip-path: polygon(0 46%, 100% 15%, 55% 74%, 0 100%);
-    background: orange;
-  }
-  75% {
-    clip-path: polygon(100% 38%, 100% 38%, 66% 100%, 0 53%);
-    background: cornflowerblue;
-  }
-}
+/***---------------------------***/
+/*** Print stylesheet ***/
+/***---------------------------***/
 
 @media print {
-
-  @page{
+  @page {
     size: A4 landscape;
   }
 
-  body{
+  body {
     animation-play-state: paused;
     -webkit-print-color-adjust: exact;
     height: 100%;
   }
 
-  main{
+  main {
     grid-gap: 1%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
-  section{
-    transform: rotate(0deg); 
+
+  section {
+    transform: rotate(0deg);
     width: 100%;
     height: 55%;
   }
 
-  section:nth-child(2){
-    transform: rotate(0deg);
-  }
-  
-  section:nth-child(3){
-    transform: rotate(0deg);
-  }
-  
-  section:nth-child(4){
+  section:nth-child(2) {
     transform: rotate(0deg);
   }
 
-  /* input[type='checkbox'] ~ article{
-    display: block;
-    height: 90%;
+  section:nth-child(3) {
+    transform: rotate(0deg);
+  }
 
-  } */
+  section:nth-child(4) {
+    transform: rotate(0deg);
+  }
 
-  section >label > header h2{
+  section > label > header h2 {
     mix-blend-mode: color-dodge;
   }
 
-  
-  input[type='checkbox'] ~ article{
+  input[type="checkbox"] ~ article {
     all: unset;
     font-size: 1.5rem;
     height: 100%;
+  }
+}
 
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation-play-state: paused;
   }
 
-  
-
-
-
-  
-
+  section div{
+    animation-play-state: paused;
+  }
 }
